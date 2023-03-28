@@ -17,7 +17,7 @@ namespace Estudiantes.ViewModel
         private string txtBxEdad;
         private string txtBxEmail;
         private List<Estudiante> estudiantesList;
-        private Object estudianteData;
+        private Estudiante estudianteData;
 
         public int IndexFilaSelect
         {
@@ -94,7 +94,7 @@ namespace Estudiantes.ViewModel
             }
         }
 
-        public Object EstudianteData
+        public Estudiante EstudianteData
         {
             get { return estudianteData; }
 
@@ -105,7 +105,7 @@ namespace Estudiantes.ViewModel
                     return;
                 }
                 estudianteData = value;
-                setFormDataEstudiante((Estudiante)estudianteData);
+                //setFormDataEstudiante((Estudiante)estudianteData);
                 OnPropertyChanged("EstudianteData");
             }
         }
