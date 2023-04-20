@@ -1,4 +1,5 @@
 ﻿using Estudiantes.Model;
+using Estudiantes.Model.PersonServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Estudiantes.ViewModel
     {
         private MainModel model;
 
+        /*
         private int indexFilaSelect = -1;
         private string txtBxNombre;
         private string txtBxEdad;
@@ -203,6 +205,40 @@ namespace Estudiantes.ViewModel
             model = new MainModel();
             model.saveEstudiante(new Estudiante("Erick", 23, "erozgp@gmail.com"));
             EstudiantesList = model.getEstudianteList();
+        }
+        */
+
+        private List<Person> peopleGetPrueba;
+
+        //private int state;
+
+        public List<Person> PeopleGetPrueba
+        {
+            get { return peopleGetPrueba; }
+
+            set
+            {
+                if (peopleGetPrueba == value)
+                {
+                    return;
+                }
+                peopleGetPrueba = value;
+                OnPropertyChanged("PeopleGetPrueba");
+            }
+        }
+
+
+
+
+
+
+
+        public MainViewModel() 
+        {
+            model = new MainModel();
+
+            PeopleGetPrueba = model.getPersonList();
+            
         }
     }
 

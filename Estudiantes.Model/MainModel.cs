@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estudiantes.Model.PersonServiceReference;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -9,6 +10,7 @@ namespace Estudiantes.Model
 {
     public class MainModel
     {
+        /*
         ControllerCRUD controllerCRUD = new ControllerCRUD();
         //Creaci�n e inicializaci�n de la variable que almacena el �ndice para el Estudiante seleccionado.
         //int indexFilaSelect = -1;
@@ -60,6 +62,25 @@ namespace Estudiantes.Model
                 //MessageBox.Show("Seleccione un elemento para eliminar. :)");
             }
         }
+
+        */
+        
+        PersonServiceClient cliente;
+
+        public MainModel() 
+        {
+            cliente = new PersonServiceClient();
+        }
+        
+
+        public List<Person> getPersonList()
+        {
+            using (cliente)
+            {
+                return cliente.GetPeople().ToList();
+            }
+        }
+
     }
 
     
