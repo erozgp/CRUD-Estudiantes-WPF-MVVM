@@ -65,22 +65,77 @@ namespace Estudiantes.Model
 
         */
         
-        PersonServiceClient cliente;
+        public PersonServiceClient cliente;
 
         public MainModel() 
         {
             cliente = new PersonServiceClient();
+
+            //cliente.Open();
         }
         
 
         public List<Person> getPersonList()
         {
-            using (cliente)
-            {
+            
                 return cliente.GetPeople().ToList();
-            }
+            
         }
 
+        public Person getTxtBxData(string TxtBxId, string TxtBxNombre, string TxtBxEdad, string TxtBxEmail)
+        {
+            var nombre = TxtBxNombre.Split(' ');
+            Person nuevaPersona = new Person();
+
+            nuevaPersona.Id = Int32.Parse(TxtBxId);
+            nuevaPersona.Name = nombre[0];
+            nuevaPersona.LastName = nombre[1];
+            nuevaPersona.Age = Int32.Parse(TxtBxEdad);
+            nuevaPersona.Email = TxtBxEmail;
+            //Obtengo los datos actualizados o nuevos de los cuadros de texto.
+            return nuevaPersona;
+        }        
+
+        public void saveEstudiante(int indexFilaSelect, Person person, bool isValidFields)
+        {
+            //Se hizo de esta manera, adaptándolo como en la versión de consola
+            //claramente, se puede editar la función AddPerson
+            //para aceptar solo un Person
+            //pero a fines prácticos, se dejó tal cual.
+            Person[] people = new Person[1];
+            people[people.Length - 1] = person;
+            
+                if (indexFilaSelect > -1 && isValidFields)
+                {
+                    //Actualiza un nuevo estudiante.
+                    cliente.UpdatePerson(people[0]);
+                    
+                }
+                else if (isValidFields)
+                {
+                    //Crea un nuevo estudiante.
+                    cliente.AddPerson(people);
+                }
+            
+            
+        }
+
+        public void removeEstudiante(int indexFilaEliminate, Person person)
+        {
+            
+                if (indexFilaEliminate > -1)
+                {
+                    cliente.DeletePerson(person.Id);
+
+                    //updateFormComponents();
+                }
+                else
+                {
+                    //MessageBox.Show("Seleccione un elemento para eliminar. :)");
+                }
+            
+            
+        }
     }
 
     

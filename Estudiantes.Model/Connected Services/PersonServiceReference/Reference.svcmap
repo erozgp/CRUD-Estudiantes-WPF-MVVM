@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:61688/PersonService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PersonService.xsd" MetadataType="Schema" ID="76ce3003-364c-46d7-8207-3b7a1cc12182" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?xsd=xsd1" />
-    <MetadataFile FileName="PersonService1.xsd" MetadataType="Schema" ID="a9e3c369-b3dd-465b-83d4-e877549b9921" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?xsd=xsd0" />
-    <MetadataFile FileName="PersonService.wsdl" MetadataType="Wsdl" ID="2cf96a46-eaca-473a-b813-77253df70a40" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?wsdl" />
-    <MetadataFile FileName="PersonService2.xsd" MetadataType="Schema" ID="2f03c6dd-259e-4c70-8d35-b875a1a68b22" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?xsd=xsd2" />
-    <MetadataFile FileName="PersonService.disco" MetadataType="Disco" ID="d4cc429d-6ea1-42b3-8782-c430a07774c8" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?disco" />
+    <MetadataFile FileName="PersonService.xsd" MetadataType="Schema" ID="68082d55-cd44-45a8-96c0-ce3200ce9772" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PersonService1.xsd" MetadataType="Schema" ID="89fb068c-85f7-4a64-8b21-99ab721659fa" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PersonService.wsdl" MetadataType="Wsdl" ID="e5e80972-c4d7-4098-9d1c-f11e94b89ef6" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?wsdl" />
+    <MetadataFile FileName="PersonService2.xsd" MetadataType="Schema" ID="01880f68-b85d-4c08-b07a-cf325fc61dc9" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PersonService.disco" MetadataType="Disco" ID="f540e03a-7a70-4529-a85c-4b217793fd94" SourceId="1" SourceUrl="http://localhost:61688/PersonService.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

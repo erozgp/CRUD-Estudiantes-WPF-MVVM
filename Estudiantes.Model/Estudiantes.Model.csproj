@@ -61,6 +61,17 @@
     <None Include="Connected Services\PersonServiceReference\Estudiantes.Model.PersonServiceReference.Person.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\PersonServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Connected Services\PersonServiceReference\PersonService.wsdl" />
     <None Include="Connected Services\PersonServiceReference\PersonService.xsd">
       <SubType>Designer</SubType>
@@ -71,24 +82,13 @@
     <None Include="Connected Services\PersonServiceReference\PersonService2.xsd">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\PersonServiceReference\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\PersonServiceReference\PersonService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\PersonServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\PersonServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\PersonServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonServiceReference\PersonService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,7 +19,7 @@
             <TextBox x:Name="TxtBxEdad" Text="{Binding TxtBxEdad}" HorizontalAlignment="Left" Margin="311,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Height="22"/>
             <TextBox x:Name="TxtBxEmail" Text="{Binding TxtBxEmail}" HorizontalAlignment="Left" Margin="473,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22"/>
             <Button x:Name="BtnSave" Content="Guardar" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="638,49,0,0" VerticalAlignment="Top" Height="33" Width="96" />
-            <DataGrid x:Name="dgEstudiantes" AutoGenerateColumns="False" ItemsSource="{Binding PeopleGetPrueba}" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="57,130,46,101" Width="NaN" SelectionMode="Single" SelectedIndex="{Binding IndexFilaSelect}" SelectedItem="{Binding EstudianteData}">
+            <DataGrid x:Name="dgEstudiantes" AutoGenerateColumns="False" ItemsSource="{Binding PeopleGetPrueba}" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="57,130,46,101" Width="NaN" SelectionMode="Single" SelectedIndex="{Binding IndexFilaSelect}" SelectedItem="{Binding PersonData}">
                 <DataGrid.Columns>
                     <!-- Definición de columnas para los datos -->
                     <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
@@ -30,7 +30,9 @@
                 </DataGrid.Columns>
             </DataGrid>
             <Button x:Name="BtnDelete" Content="Eliminar" HorizontalAlignment="Left" Margin="85,355,0,0" VerticalAlignment="Top" Height="33" Width="96" Command="{Binding RemoveCommand}"/>
-    
+            <TextBox x:Name="TxtBxId" Text="{Binding TxtBxId}" HorizontalAlignment="Left" Margin="118,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22"/>
+            <Label Content="Id:" HorizontalAlignment="Left" Margin="66,92,0,0" VerticalAlignment="Top"/>
+
         </Grid>
     </Grid>
 </Window>
